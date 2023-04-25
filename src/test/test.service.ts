@@ -7,8 +7,11 @@ import { Test } from './entities/test.entity'
 @Injectable()
 export class TestService {
   constructor(@InjectRepository(Test) private readonly test: Repository<Test>) { }
-  create(createTestDto: CreateTestDto) {
-    return 'This action adds a new test';
+  create() {
+    const data = new Test()
+    data.name = "小满"
+    data.age = 123
+    return this.test.save(data);
   }
 
   findAll(query: { keyWord: string }) {

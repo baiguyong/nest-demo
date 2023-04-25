@@ -8,7 +8,7 @@ import { TestModule } from './test/test.module';
     type: 'mysql',//数据库类型
     username: "root",//账号
     password: "123456",//密码
-    host: "localhost",//host
+    host: "192.168.5.227",//host
     port: 3306,//
     database: "guyong",//库名
     // entities: [__dirname + '/**/*.entity{.ts.js}'],//实体文件

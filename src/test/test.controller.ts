@@ -10,7 +10,7 @@ export class TestController {
 
   @Post()
   create(@Body() createTestDto: CreateTestDto) {
-    return this.testService.create(createTestDto);
+    return this.testService.create();
   }
 
   // @Get()
@@ -19,6 +19,7 @@ export class TestController {
   // }
   @Get()
   findAll1() {
+    this.testService.create()
     return this.testService.findAll1();
     // return "@@@"
   }

@@ -7,8 +7,8 @@ export class Test {
     @Column()
     name: string
 
-    @Column()
-    password: string
+    // @Column()
+    // password: string
 
     // @Generated('uuid')
     // uuid: string
