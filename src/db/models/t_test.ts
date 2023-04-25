@@ -1,25 +1,25 @@
 import * as Sequelize from 'sequelize';
 import { DataTypes, Model, Optional } from 'sequelize';
 
-export interface testAttributes {
+export interface t_testAttributes {
   name: string;
   age: number;
   id: number;
 }
 
-export type testPk = "id";
-export type testId = test[testPk];
-export type testOptionalAttributes = "id";
-export type testCreationAttributes = Optional<testAttributes, testOptionalAttributes>;
+export type t_testPk = "id";
+export type t_testId = t_test[t_testPk];
+export type t_testOptionalAttributes = "id";
+export type t_testCreationAttributes = Optional<t_testAttributes, t_testOptionalAttributes>;
 
-export class test extends Model<testAttributes, testCreationAttributes> implements testAttributes {
+export class t_test extends Model<t_testAttributes, t_testCreationAttributes> implements t_testAttributes {
   name!: string;
   age!: number;
   id!: number;
 
 
-  static initModel(sequelize: Sequelize.Sequelize): typeof test {
-    return test.init({
+  static initModel(sequelize: Sequelize.Sequelize): typeof t_test {
+    return t_test.init({
     name: {
       type: DataTypes.STRING(255),
       allowNull: false
@@ -36,7 +36,7 @@ export class test extends Model<testAttributes, testCreationAttributes> implemen
     }
   }, {
     sequelize,
-    tableName: 'test',
+    tableName: 't_test',
     timestamps: false,
     indexes: [
       {

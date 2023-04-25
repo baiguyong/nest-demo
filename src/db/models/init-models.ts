@@ -1,21 +1,21 @@
 import type { Sequelize } from "sequelize";
-import { test as _test } from "./test";
-import type { testAttributes, testCreationAttributes } from "./test";
+import { t_test as _t_test } from "./t_test";
+import type { t_testAttributes, t_testCreationAttributes } from "./t_test";
 
 export {
-  _test as test,
+  _t_test as t_test,
 };
 
 export type {
-  testAttributes,
-  testCreationAttributes,
+  t_testAttributes,
+  t_testCreationAttributes,
 };
 
 export function initModels(sequelize: Sequelize) {
-  const test = _test.initModel(sequelize);
+  const t_test = _t_test.initModel(sequelize);
 
 
   return {
-    test: test,
+    t_test: t_test,
   };
 }

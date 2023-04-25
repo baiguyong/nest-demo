@@ -3,6 +3,7 @@ import { Like, Repository } from 'typeorm'
 import { InjectRepository } from '@nestjs/typeorm'
 import { UpdateTestDto } from './dto/update-test.dto'
 import { Test } from './entities/test.entity'
+import { t_test } from 'src/db/models/t_test'
 
 @Injectable()
 export class TestService {
@@ -23,10 +24,9 @@ export class TestService {
   }
 
   findAll1() {
-    const data = this.test.find()
-    console.log(data)
+    // const data = this.test.find()
+    return t_test.findAll()
 
-    return data
   }
 
   findOne(id: number) {
