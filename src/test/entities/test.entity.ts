@@ -1,35 +1,35 @@
-import { Column, CreateDateColumn, Entity, Generated, PrimaryGeneratedColumn } from 'typeorm'
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
+
 @Entity()
 export class Test {
-    @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn()
     id: number
 
-    @Column()
+  @Column()
     name: string
 
-    // @Column()
-    // password: string
+  // @Column()
+  // password: string
 
-    // @Generated('uuid')
-    // uuid: string
+  // @Generated('uuid')
+  // uuid: string
 
-    @Column()
+  @Column()
     age: number
 
-    // @Column({
-    //     type: "enum",
-    //     enum: [1, 2, 3],
-    //     default: 1
-    // })
-    // xioaman: number
+  // @Column({
+  //     type: "enum",
+  //     enum: [1, 2, 3],
+  //     default: 1
+  // })
+  // xioaman: number
 
-    // @CreateDateColumn()
-    // creatime: Date
+  // @CreateDateColumn()
+  // creatime: Date
 
-    // @Column('simple-array')
-    // names: string[]
+  // @Column('simple-array')
+  // names: string[]
 
-
-    // @Column('simple-json')
-    // json: { name: string, age: number }
+  // @Column('simple-json')
+  // json: { name: string, age: number }
 }

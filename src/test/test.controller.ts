@@ -1,8 +1,7 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Query } from '@nestjs/common';
-import { TestService } from './test.service';
-import { CreateTestDto } from './dto/create-test.dto';
-import { UpdateTestDto } from './dto/update-test.dto';
-import { query } from 'express';
+import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common'
+import { TestService } from './test.service'
+import { CreateTestDto } from './dto/create-test.dto'
+import { UpdateTestDto } from './dto/update-test.dto'
 
 @Controller('test')
 export class TestController {
@@ -10,7 +9,7 @@ export class TestController {
 
   @Post()
   create(@Body() createTestDto: CreateTestDto) {
-    return this.testService.create();
+    return this.testService.create()
   }
 
   // @Get()
@@ -20,21 +19,22 @@ export class TestController {
   @Get()
   findAll1() {
     this.testService.create()
-    return this.testService.findAll1();
+    return this.testService.findAll1()
     // return "@@@"
   }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.testService.findOne(+id);
+    return this.testService.findOne(+id)
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateTestDto: UpdateTestDto) {
-    return this.testService.update(+id, updateTestDto);
+    return this.testService.update(+id, updateTestDto)
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.testService.remove(+id);
+    return this.testService.remove(+id)
   }
 }
