@@ -18,7 +18,7 @@ export class TestController {
   // }
   @Get()
   findAll1() {
-    // this.testService.create()
+    this.testService.create()
     return this.testService.findAll1()
     // return "@@@"
   }
